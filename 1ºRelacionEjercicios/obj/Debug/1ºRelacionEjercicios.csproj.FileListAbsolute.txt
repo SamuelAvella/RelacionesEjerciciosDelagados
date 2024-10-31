@@ -1,0 +1,7 @@
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\bin\Debug\1ºRelacionEjercicios.exe.config
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\bin\Debug\1ºRelacionEjercicios.exe
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\bin\Debug\1ºRelacionEjercicios.pdb
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\obj\Debug\1ºRelacionEjercicios.csproj.AssemblyReference.cache
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\obj\Debug\1ºRelacionEjercicios.csproj.CoreCompileInputs.cache
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\obj\Debug\1ºRelacionEjercicios.exe
+C:\Users\saveper1907\Desktop\2DAM\DI\C#\Delegados\1ºRelacionEjercicios\obj\Debug\1ºRelacionEjercicios.pdb
