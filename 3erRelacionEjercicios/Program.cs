@@ -12,9 +12,9 @@ namespace _3erRelacionEjercicios
         public delegate bool ValidarEdades(int x);
 
         //Ejercicio 2
-        static void ImprimirConsola(ValidarEdades validate)
+        static void ImprimirConsola(ValidarEdades validate, int edad)
         {
-            Console.WriteLine(validate(19));
+            Console.WriteLine(validate(edad));
         }
 
         static void Main(string[] args)
@@ -29,7 +29,7 @@ namespace _3erRelacionEjercicios
             Console.WriteLine(validate(19));
 
             //Ejercicio 2
-            ImprimirConsola(validate);
+            ImprimirConsola(validate, 19);
         }
     }
 }
