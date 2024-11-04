@@ -11,6 +11,9 @@ namespace _2ºRelacionEjercicios
   
     //Ejercicio 6
     delegate int Operar(int x, int y);
+
+    //Ejercicio 7 
+    delegate int OperarArray(int[] numeros);
     internal class Program
     {
         //Ejercicio 1
@@ -38,12 +41,32 @@ namespace _2ºRelacionEjercicios
         }
 
         //Ejercicio 6
-        static double Suma(int x, int y) => x + y;
+        static int Suma(int x, int y) => x + y;
 
-        static double Resta(int x, int y) => x - y;
+        static int Resta(int x, int y) => x - y;
 
-        static double Multiplicacion(int x, int y) => x * y;
+        static int Multiplicacion(int x, int y) => x * y;
 
+        //Ejercicio 7 
+        static int Suma(int[] numeros) 
+        {
+            int resultado = 0;
+            foreach(int num in numeros)
+            {
+                resultado += num;
+            }
+            return resultado;
+        }
+
+        static int Multiplicacion(int[] numeros)
+        {
+            int resultado = 1;
+            foreach (int num in numeros)
+            {
+                resultado *= num;
+            }
+            return resultado;
+        }
 
         static void Main(string[] args)
         {
@@ -79,7 +102,7 @@ namespace _2ºRelacionEjercicios
             opEj4 += Restar;
             opEj4 += Multiplicar;
             opEj4 += Dividir;
-            Console.WriteLine("Todos los métodos con los número 5 y 3, primero suma, segundo resta y tercero multiplicación");
+            Console.WriteLine("Todos los métodos con los número 5 y 3, primero suma, segundo resta, tercero multiplicación y cuarto división");
             foreach (Operacion metodo in opEj4.GetInvocationList())
             {
                 try
@@ -100,15 +123,25 @@ namespace _2ºRelacionEjercicios
 
             //Ejercicio 6
             Console.WriteLine("\nEjercicio 6: Delegados y Nombres");
-            Operacion opEj6 = Suma;
+            Operar opEj6 = Suma;
             opEj6 += Resta;
             opEj6 += Multiplicacion;
-            Console.WriteLine("Ambos metodos con los número 5 y 3, primero suma despues resta");
-            foreach (Operacion metodo in opEj2.GetInvocationList())
+            Console.WriteLine("Todos los métodos con los números 5 y 3, primero suma, segundo resta y tercero multiplicación, cada uno con su nombre");
+            foreach (Operacion metodo in opEj6.GetInvocationList())
             {
-                Console.WriteLine($"·{metodo(5, 3)}");
+                Console.WriteLine($"{metodo.Method.Name}: {metodo(5, 3)}");
             }
 
+            //Ejercicio 7
+            Console.WriteLine("\nEjercicio 7: Delegados y Arrays");
+            Operar opEj7 = Suma;
+            opEj7 += Multiplicacion;
+            int[] numerosEj7 = { 1, 2, 3, 4, 5, 6, };
+            Console.WriteLine("Todos los métodos con los números 5 y 3, primero suma y despues multiplicación, cada uno con su nombre");
+            foreach (Operacion metodo in opEj7.GetInvocationList())
+            {
+                Console.WriteLine($"{metodo.Method.Name}: {metodo(numerosEj7)}");
+            }
         }
     }
 }
